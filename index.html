@@ -16,6 +16,9 @@
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta content="Webflow" name="generator" />
     <link href="https://cdn.prod.website-files.com/6462467c39036f3d5f2ad5c3/css/anyoneevents.webflow.ce5988fbc.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400&display=swap" rel="stylesheet">     <style>
         @media (min-width:992px) {
             html.w-mod-js:not(.w-mod-ix) [data-w-id="6da5109f-bd57-0602-b67c-d64a2269d83c"] {
@@ -39,7 +42,7 @@
 
         .hero {
             color: white;
-            font-size: 7rem;
+            font-size: 9rem;
             font-family: 'Satoshi', sans-serif;
             font-weight: 400;
             font-style: normal;
@@ -47,13 +50,46 @@
             margin: 0;
             padding: 0;
             line-height: 1.1;
-        }
+        
+
+        @media screen and (max-width: 767px) {
+        font-size: 6rem;
+    }
+
+}
 
         h1 {
             font-family: 'Satoshi', sans-serif;
         }
 
-        
+        .hero-text {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.hero-text .roundall-white.float {
+    position: absolute;
+    top: -2rem;
+    left: 1rem;
+    
+    @media screen and (max-width: 991px) {
+        top: -1.75rem;
+        left: 1rem;
+    }
+    
+    @media screen and (max-width: 767px) {
+        top: -1.5rem;
+        left: 0.25rem;
+    }
+    
+    @media screen and (max-width: 479px) {
+        top: -1.25rem;
+        left: 0.25rem;
+    }
+}
+
 
         .hero-text {
             margin: 0;
@@ -98,6 +134,11 @@
 
 }
 
+.section-why {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
 .banner13_heading-top {
     font-family: 'Satoshi', sans-serif;
 
@@ -138,6 +179,25 @@
 
                 
             </style>
+
+<script>
+    gsap.registerPlugin(ScrollTrigger);
+  
+    gsap.to(".heading-2", {
+      scrollTrigger: {
+        trigger: "#Overview",
+        start: "top 80%",
+        toggleActions: "play none none none",
+        onEnter: () => console.log("Overview h2 triggered"),
+      },
+      opacity: 1,
+      y: 0,
+      duration: 1.2,
+      ease: "power2.out"
+    });
+  </script>
+  
+  
         </div>
         <div data-animation="over-left" class="rl_navbar3_component w-nav" data-easing2="ease" fs-scrolldisable-element="smart-nav" data-easing="ease-in-out-cubic" data-collapse="medium" style="-webkit-transform:translate3d(0, -85px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -85px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -85px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -85px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" data-w-id="bd6b9ffe-bdab-d734-7225-a6742598caf6" role="banner" data-duration="800">
             <div class="rl_navbar3_container">
@@ -150,7 +210,7 @@
                 <nav role="navigation" class="rl_navbar3_menu w-nav-menu"><a href="index.html#" class="rl_navbar3_logo-link-menu w-nav-brand"><img src="circles.png" loading="eager" alt="Anyone Events Logo" class="favi_icon" /></a><a href="index.html#Overview" class="rl_navbar3_link w-nav-link">About</a>
                     <div class="nav-bar-speakers"><a href="index.html#Speakers" class="rl_navbar3_link no-padding w-nav-link">Framework</a>
                         <div class="text-style-allcaps badge hide-mobile-portrait hide-tablet">3</div>
-                    </div><a href="index.html#Partners" class="rl_navbar3_link w-nav-link">Partners</a><a href="index.html#Join-Our-Community" class="rl_navbar3_link w-nav-link">Contact</a>
+                    </div><a href="index.html#About" class="rl_navbar3_link w-nav-link">About</a><a href="index.html#Join-Our-Community" class="rl_navbar3_link w-nav-link">Contact</a>
                     <article class="fixed-bottom"><a href="https://www.eventbrite.com/e/anyone-creative-meetup-002-reflection-tickets-998517792597" target="_blank" class="button is-tertiary w-button"> Tickets</a>
                         <div class="w-layout-grid nav_social-list"><a href="https://instagram.com/anyoneevents" target="_blank" class="footer3_social-link text-color-white w-inline-block">
                                 <div class="icon-embed-xsmall w-embed"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -178,23 +238,10 @@
                                 <div class="theme-text">
                                     <div class="text-style-allcaps hide-mobile-portrait hide-mobile-landscape">Reviving Collaboration</div>
                                     <div class="indent-text"><img src="https://cdn.prod.website-files.com/6462467c39036f3d5f2ad5c3/66c0948352127360d3ddf391_Line-Break.svg" loading="lazy" alt="" class="indent hide-mobile-landscape hide-mobile-portrait" />
-                                        <div class="text-style-allcaps hide-mobile-portrait hide-mobile-landscape">To push creative innovation foRwards</div>
+                                        <div class="text-style-allcaps hide-mobile-portrait hide-mobile-landscape">To push innovation foRwards</div>
                                     </div>
                                 </div>
-                                <div class="location-thumb">
-                                    <div class="location-text">
-                                        <div class="roundall-white">
-                                            <div class="roundall-label">
-                                                <div class="text-style-allcaps text-size-small">FREE ENTRY</div>
-                                            </div>
-                                        </div>
-                                        <div class="padding-xxsmall"></div>
-                                        <div class="date-text">
-                                            <div class="text-style-allcaps">14th October 2024<br />DEPARTMENT LEEDs DOCK - 5:30pm</div>
-                                        </div>
-                                    </div>
-                                    <div class="padding-small"></div><a href="" target="_blank" class="google-maps w-inline-block"><img src="circles.png" loading="lazy" alt="Department offices co-working space" class="location-img" /></a>
-                                </div>
+                                
                             </div>
                             <div data-w-id="98e96209-aa4a-9f74-d02c-e1a844363958" style="opacity:0" class="hero-text">
                                 <div class="roundall-white float">
@@ -249,7 +296,7 @@
                                         <div data-w-id="1292fc01-510c-6984-3474-e1e55e28bd98" style="opacity:0;-webkit-transform:translate3d(0, 16px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 16px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 16px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 16px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="roundall-white">
                                             <div class="roundall-label">
                                                 <div class="bulletpoint"></div>
-                                                <div class="text-style-allcaps">CREATIVE Photographer</div>
+                                                <div class="text-style-allcaps">Phase 1</div>
                                             </div>
                                         </div>
                                     </div>
@@ -263,7 +310,7 @@
                                         <div data-w-id="20fccff9-4d29-4b6d-4d6c-28ae8a87fbd7" style="opacity:0;-webkit-transform:translate3d(0, 16px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 16px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 16px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 16px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="roundall-white">
                                             <div class="roundall-label">
                                                 <div class="bulletpoint"></div>
-                                                <div class="text-style-allcaps">Founder of ANOTHERWAY® DIGITAL</div>
+                                                <div class="text-style-allcaps">Phase 2</div>
                                             </div>
                                         </div>
                                     </div>
@@ -278,7 +325,7 @@
                                         <div data-w-id="47e06059-307c-2380-f9cd-18b932cc2b42" style="opacity:0;-webkit-transform:translate3d(0, 16px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 16px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 16px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 16px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="roundall-white">
                                             <div class="roundall-label">
                                                 <div class="bulletpoint"></div>
-                                                <div class="text-style-allcaps">Type Designer &amp; Animator</div>
+                                                <div class="text-style-allcaps">Phase 3</div>
                                             </div>
                                         </div>
                                     </div>
@@ -396,17 +443,7 @@ Change the color of the text here, instead of on Webflow for this to work */
                                 <div id="w-node-a78dadcf-dec9-4813-d625-87bcf9e4ab7b-5f2ad5bd" class="padding-section-small">
                                     <h2 data-w-id="a78dadcf-dec9-4813-d625-87bcf9e4ab7c" style="opacity:0;-webkit-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="heading-style-h6 text-color-white">The Circles Initiative aims to reignite the flame of collective effort through a series of intentional, curated collaborations between technologists, researchers, business leaders, policy makers, and frontline practitioners, directed towards finding actionable solutions. We pair these participants with the most pressing systemic challenges and equip them with the sharpest tools, strategic support, and the freedom to think beyond institutional constraints, resulting in idea generation that moves decisively towards implementation.</h2>
                                 </div>
-                                <div class="padding-section-small">
-                                    <h1 data-obs-once="true" data-a-split="line" data-a-delay=".2" class="heading-4 is-white text-style-allcaps">Why attend<br /><span class="text-weight-bold padding-left">Anyone</span></h1>
-                                </div>
-                                <div id="w-node-_859df886-8c1e-15e8-127c-aa6bb23c54b7-5f2ad5bd" class="padding-section-small">
-                                    <ul data-w-id="fb1dba84-50f6-2058-4f64-95db424e7978" style="opacity:0;-webkit-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" role="list" class="list">
-                                        <li class="list-item">Hear from local experts and learn from the best as they share their insights and tips for tackling today&#x27;s creative challenges. </li>
-                                        <li class="list-item">Meet new people and connect with other creatives in your area, whether their potential partnerships or just new friends.</li>
-                                        <li class="list-item">Take part in conversations that will spark your creativity and help you think differently about the future of your work. </li>
-                                        <li class="list-item">Join the conversation about where our creative community is heading and how we can shape it together.</li>
-                                    </ul>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -422,7 +459,7 @@ Change the color of the text here, instead of on Webflow for this to work */
                     </div>
                 </section>
             </div>
-            <section id="Partners" class="section-logogrid">
+            <!--<section id="Partners" class="section-logogrid">
                 <div class="padding-global">
                     <div class="container-large">
                         <div class="padding-section-large">
@@ -450,7 +487,7 @@ Change the color of the text here, instead of on Webflow for this to work */
                         </div>
                     </div>
                 </div>
-            </section>
+            </section>-->
             <footer id="Join-Our-Community" class="footer3_component">
                 <div class="padding-global">
                     <div class="container-large">
