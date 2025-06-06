@@ -151,33 +151,17 @@
             position: fixed;
             top: 0;
             left: 0;
-            width: 100%;
+            width: 100vw;
             height: 100vh;
-            z-index: -1;
-            overflow: hidden;
+             z-index: -1;
         }
 
         .spline-scene canvas {
-            background-color: white !important;
             width: 100% !important;
             height: 100% !important;
             object-fit: cover;
         }
 
-        @media screen and (max-width: 767px) {
-            .spline-scene {
-                position: fixed;
-                height: 200vh;
-                width: 200vw;
-                overflow: hidden;
-            }
-            
-            .spline-scene canvas {
-                width: 200vw !important;
-                height: 200vh !important;
-                object-fit: cover;
-            }
-        }
 
         [data-w-id="84858d28-f7cf-0b8c-a86d-cfd3c5b60d90"] {
             font-family: 'Satoshi', sans-serif;
