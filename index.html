@@ -245,6 +245,10 @@
             font-family: 'Satoshi', sans-serif;
         }
 
+        .section-why {
+            background: black;
+        }
+
         
 
         .line {
@@ -325,6 +329,9 @@
 
 
     </div>
+
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
     <div data-animation="over-left" class="rl_navbar3_component w-nav" data-easing2="ease"
         fs-scrolldisable-element="smart-nav" data-easing="ease-in-out-cubic" data-collapse="medium"
         style="-webkit-transform:translate3d(0, -85px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -85px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -85px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -85px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
@@ -434,7 +441,7 @@
                             data-a-split="char" data-a-each=".02" data-obs-once="true" data-a-delay=".1"
                             data-a-ease="slow.out" data-obs-m="0px">Framework</h1>
                     </div>
-                    <div class="rl-padding-section-medium">
+                    
                         <div class="speaker-list-component">
                             <div data-w-id="9f8182e6-a987-46e2-d429-a2de4763b47a" class="speaker-list-item">
                                 <div class="speaker-name">
@@ -544,11 +551,11 @@ Change the color of the text here, instead of on Webflow for this to work */
                             </div>
                         </div>
                         <div class="padding-xxlarge"></div>
-                    </div>
+                    
                 </div>
             </div>
         </section>
-        <section id="Socials" class="section-carousel">
+        <!--<section id="Socials" class="section-carousel">
             <section class="section_gallery18">
                 <div class="gallery18_component">
                     <div data-delay="3000" data-animation="slide" class="gallery18_slider w-slider" data-autoplay="true"
@@ -654,8 +661,8 @@ Change the color of the text here, instead of on Webflow for this to work */
                         <div class="gallery18_slide-nav w-slider-nav w-slider-nav-invert w-round"></div>
                     </div>
                 </div>
-            </section>
-        </section>
+            </section>-->
+        
         <section id="Why-Anyone" class="section-why">
             <div class="rl-padding-global">
                 <div class="rl-container-large">
@@ -871,6 +878,9 @@ Change the color of the text here, instead of on Webflow for this to work */
             </div>
         </section>
     </main>
+
+</div>
+</div>
     <div data-w-id="25543b0b-40a9-41f3-a850-e2294e76808c" style="opacity:0" class="spline-scene"
         data-animation-type="spline" data-spline-url="https://prod.spline.design/4ipUbJt6Yd0jldTr/scene.splinecode">
         <canvas></canvas></div>
@@ -904,7 +914,14 @@ Change the color of the text here, instead of on Webflow for this to work */
 -->
 
     <!-- jQuery script to clone the image -->
-    
+    <script>
+        $(window).on('load', function () {
+            $('.gallery18_image-wrapper').last().append($('.gallery18_image').clone());
+        });
+    </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+      <script src="https://assets.codepen.io/16327/ScrollSmoother.min.js"></script>
     </body>
 
 </html>
