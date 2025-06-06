@@ -29,10 +29,19 @@
 
     <link rel="icon" href="circles.png" type="image/png">
     <style>
+        body,
+        h1, h2, h3, h4, h5, h6 {
+            color: black !important;
+        }
+
         @media (min-width:992px) {
             html.w-mod-js:not(.w-mod-ix) [data-w-id="6da5109f-bd57-0602-b67c-d64a2269d83c"] {
-                border-color: rgb(255, 255, 255);
+                border-color: rgb(0, 0, 0);
             }
+        }
+
+        .text-style-allcaps {
+            color: black;
         }
 
         /* Make sure containers never lose their center alignment */
@@ -80,7 +89,7 @@
 
 
         .hero {
-            color: white;
+            color: rgb(0, 0, 0);
             font-size: 9rem;
             font-family: 'Satoshi', sans-serif;
             font-weight: 400;
@@ -104,7 +113,7 @@
         }
 
         body{
-            background-color: black;
+            background-color: rgb(255, 255, 255);
         }
 
         .hero-text {
@@ -207,7 +216,7 @@
 
         [data-w-id="a1da29f5-9597-8063-41b7-24c0692fa104"] {
             font-family: 'Satoshi', sans-serif;
-            background-color: #6094bc !important;
+            background-color: #7c7e7f !important;
             font-size: 1rem;
             
         }
@@ -220,6 +229,7 @@
         .word,
         .char {
             font-family: 'Satoshi', sans-serif;
+            color: black;
 
         }
 
@@ -233,24 +243,44 @@
 
         }
 
+        .rl_navbar3_component {
+            background: rgba(202, 202, 202, 0.428);
+        }
+
+        .section-ourspeakers {
+            background: transparent;
+        }
+
         [data-w-id="2b4547a0-9955-b8da-532d-d879a98f06b5"],
         [data-w-id="a12f023f-897c-e181-5d00-406ce8ba51bc"] {
-            background-color: #7bc2f8 !important;
+            background-color: #7c7e7f !important;
             font-size: 1rem;
         }
 
         .button.hide-desktop {
-            background-color: #7bc2f8 !important;
+            background-color: #7c7e7f !important;
             font-size: 1rem;
           
             font-family: 'Satoshi', sans-serif;
         }
 
         .section-why {
-            background: black;
+            background: transparent;
         }
 
-        
+        .roundall-white.float, .roundall-white {
+            color: transparent;
+            border-radius: 15px;
+            border-color: black;
+        }
+
+        .section-largetext{
+            background-color: transparent; 
+        }
+
+        .footer3_component {
+            background: transparent;
+        }
 
         .line {
             margin-top: 5px;
@@ -258,21 +288,46 @@
 
 
         [data-nav-menu-open] {
-            background: rgb(0, 0, 0);
+            background: rgb(255, 255, 255);
             color: white;
             font-family: 'Satoshi', sans-serif !important;
              
 
         }
 
+.section-overview {
+    background: transparent;
+}
+
+
+        .rl_menu-icon3_line-middle, .rl_menu-icon3_line-top{
+            background: black;
+        }
+
         .rl_navbar3_link {
             font-family: 'Satoshi', sans-serif !important;
+            color: black;
            
         }
 
+        .heading-3 {
+            color: black;
+        }
+
+        .heading-style-h6 {
+            color: black;
+        }
+
+        .bulletpoint, .roundall-label {
+            color: black;
+        }
+
+        .bulletpoint {
+            background-color: black;
+        }
 
         .spline-scene canvas {
-            filter: hue-rotate(332deg) saturate(30%) brightness(200%);
+            filter: invert() hue-rotate(140deg) saturate(50%) brightness(100%);
         }
 
         .spline-scene {
@@ -318,11 +373,25 @@
         /* Style for mobile Read More button */
         .button.hide-desktop {
             
-            background-color: black !important;
+            background-color: white !important;
             font-size: 1rem;
             border-color: #7bc2f8 !important;
             border-radius: 1px;
 
+        }
+
+        .roundall-black .roundall-label .bulletpoint {
+             background-color: black;
+        }
+
+        .button-black.is-icon path,
+        .gallery18_arrow-icon svg path {
+            fill: black;
+        }
+
+
+        .button.is-icon {
+            background: #7c7e7f;
         }
     </style>
 
