@@ -43,7 +43,7 @@
         }
 
         [data-w-id="35ae3335-0f73-8cb0-faf4-6c8f59756327"]{
-            margin-top: -80px;
+            margin-top: -70px;
         }
 
         /* Navbar logo size */
@@ -199,12 +199,13 @@
             filter: hue-rotate(332deg) saturate(30%) brightness(200%);
         }
 
-        .spline-scene canvas {
+        .spline-scene {
             position: fixed;
+            width: 100vw;
+            height: 100dvh;
             top: 0;
             left: 0;
-            width: 100vw;
-            height: 100dvh; /* modern solution: dynamic viewport height */
+            overflow: hidden;
             z-index: -1;
         }
 
