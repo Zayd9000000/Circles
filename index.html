@@ -147,21 +147,7 @@
             font-family: 'Satoshi', sans-serif;
         }
 
-        .spline-scene {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-             z-index: -1;
-        }
-
-        .spline-scene canvas {
-            width: 100% !important;
-            height: 100% !important;
-            object-fit: cover;
-        }
-
+        
 
         [data-w-id="84858d28-f7cf-0b8c-a86d-cfd3c5b60d90"] {
             font-family: 'Satoshi', sans-serif;
@@ -211,6 +197,15 @@
 
         .spline-scene canvas {
             filter: hue-rotate(332deg) saturate(30%) brightness(200%);
+        }
+
+        .spline-scene canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100dvh; /* modern solution: dynamic viewport height */
+            z-index: -1;
         }
 
         .rl_navbar3_link:hover,
