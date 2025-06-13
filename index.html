@@ -71,10 +71,7 @@
             width: 80px;
             height: auto;
             display: fixed;
-
             margin: 0 auto;
-            
-
         }
 
         .rl_navbar3_logo-link {
@@ -96,13 +93,20 @@
 
         @media screen and (max-width: 767px) {
             .rl_navbar3_logo-link {
-                position: relative;
-                left: 0;
+                position: absolute;
+                left: auto;
+                right: 20px;
                 transform: none;
+            }
+            
+            .rl_navbar3_logo {
+                width: 40px;
+                height: auto;
             }
             
             .rl_navbar3_container {
                 justify-content: space-between;
+                padding: 0 20px;
             }
             
             .rl_navbar3_menu {
