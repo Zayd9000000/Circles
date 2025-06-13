@@ -64,11 +64,8 @@
         .rl_navbar3_logo {
             width: 40px;
             height: auto;
-            display: fixed;
-
+            display: block; /* Changed from fixed to block */
             margin: 0 auto;
-            
-
         }
 
         .rl_navbar3_logo2 {
@@ -85,12 +82,56 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
+            position: relative; /* Changed from absolute to relative */
+            margin: 0 auto;
+            width: 100%;
+            max-width: 1200px;
+            padding: 0 15px;
+            box-sizing: border-box;
         }
 
 
+
+        @media screen and (max-width: 767px) {
+    .rl_navbar3_component {
+        width: 100%;
+        padding: 0;
+        box-sizing: border-box;
+        transform: none !important; /* Override the transform */
+    }
+    
+    .rl_navbar3_container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    
+    .rl_navbar3_menu {
+        width: 100%;
+        padding: 0;
+    }
+    
+    .rl_navbar3_link {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+    
+    .nav-right {
+        display: none; /* Hide the right side text on mobile */
+    }
+    
+    .rl_navbar3_logo-link {
+        position: relative;
+        transform: none;
+        left: auto;
+    }
+}
 
         .hero {
             color: rgb(0, 0, 0);
@@ -247,6 +288,13 @@
         .banner13_heading-top {
             font-family: 'Satoshi', sans-serif;
             color: #7bc2f8;
+        }
+
+        @media screen and (max-width: 767px) {
+            .banner13_heading-top {
+                font-size: 15rem;
+                line-height: 1.2;
+            }
         }
 
         .rl_navbar3_component {
@@ -446,7 +494,7 @@
                         alt="Circles Logo" class="favi_icon" /></a>
                 <div class="nav-bar-speakers"><a href="index.html#Speakers"
                         class="rl_navbar3_link no-padding w-nav-link">Framework</a>
-                    <div class="text-style-allcaps badge hide-mobile-portrait hide-tablet">3</div>
+                    
                 </div><a href="index.html#About" class="rl_navbar3_link w-nav-link">About</a><a
                     href="mailto:info@circlesinitiative.com" class="rl_navbar3_link w-nav-link">Contact</a>
                 <article class="fixed-bottom"></div>
