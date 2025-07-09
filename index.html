@@ -456,6 +456,76 @@
         .nav-right {
             margin-left: 700px;
         }
+
+        .framework-about-bg-fade {
+            position: absolute;
+            left: 0;
+            width: 100vw;
+            /* Adjust top and height to cover both sections. You may need to tweak these values for perfect alignment. */
+            top:  calc(var(--framework-section-top, 0px));
+            height: calc(var(--framework-about-height, 1200px)); /* Estimate, adjust as needed */
+            z-index: 0;
+            pointer-events: none;
+            background: linear-gradient(
+                to bottom,
+                rgba(247,247,247,0) 0%,
+                #F7F7F7 8%,
+                #F7F7F7 92%,
+                rgba(247,247,247,0) 100%
+            );
+        }
+        
+        /* Ensure main content is above the fade */
+        .main-wrapper > *:not(.framework-about-bg-fade) {
+            position: relative;
+            z-index: 1;
+        }
+        .section-fade-bg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+        .section-ourspeakers > *:not(.section-fade-bg),
+        .section-why > *:not(.section-fade-bg) {
+            position: relative;
+            z-index: 1;
+        }
+        .section-fade-in {
+            background: linear-gradient(
+              to bottom,
+              rgba(247,247,247,0) 0%,
+              #F7F7F7 100%
+            );
+        }
+        .section-fade-out {
+            background: linear-gradient(
+              to bottom,
+              #F7F7F7 0%,
+              rgba(247,247,247,0) 100%
+            );
+        }
+        .framework-fade {
+            background: linear-gradient(
+              to bottom,
+              rgba(247,247,247,0) 0%,
+              #F7F7F7 20%,
+              #F7F7F7 100%
+            );
+        }
+        .about-solid {
+            background: #F7F7F7;
+        }
+        .banner-fade {
+            background: linear-gradient(
+              to bottom,
+              #F7F7F7 0%,
+              rgba(247,247,247,0) 100%
+            );
+        }
     </style>
 
 
@@ -488,374 +558,267 @@
             </nav><a href="index.html#Header" class="rl_navbar3_logo-link w-nav-brand"><img src="circle.png"
                     loading="lazy" alt="" class="rl_navbar3_logo" /></a>
             <div id="w-node-_25c9142e-ec56-65b2-7673-351d4be4954b-5f2ad5bd" class="nav-right">
-                <div class="text-style-allcaps text-align-left hide-tablet">Collective Intelligence for<br />Collective
-                    Challenges</div>
+                <div class="text-style-allcaps text-align-left hide-tablet"></div>
             </div>
             <div style="opacity:0" class="rl_navbar3_menu-background"></div>
         </div>
     </div>
     <main class="main-wrapper">
+        <!-- Wrap Framework and About sections for seamless fade background -->
         <figure id="Header" class="rl_section_header5">
-            <div class="rl-padding-global">
-                <div class="rl-container-large">
-                    <div class="header5_component">
-                        <div data-w-id="80e86445-6a88-4cdd-92ee-2ec0b0cdf93c" style="opacity:0" class="header-subtext">
-                            <div class="theme-text">
-                                <div class="text-style-allcaps hide-mobile-portrait hide-mobile-landscape">Reviving
-                                    Collaboration</div>
-                                <div class="indent-text"><img
-                                        src="https://cdn.prod.website-files.com/6462467c39036f3d5f2ad5c3/66c0948352127360d3ddf391_Line-Break.svg"
-                                        loading="lazy" alt=""
-                                        class="indent hide-mobile-landscape hide-mobile-portrait" />
-                                    <div class="text-style-allcaps hide-mobile-portrait hide-mobile-landscape">To push
-                                        innovation foRwards</div>
+                <div class="rl-padding-global">
+                    <div class="rl-container-large">
+                        <div class="header5_component">
+                            <div data-w-id="80e86445-6a88-4cdd-92ee-2ec0b0cdf93c" style="opacity:0" class="header-subtext">
+                                <div class="theme-text">
+                                    <div class="text-style-allcaps hide-mobile-portrait hide-mobile-landscape">Reviving
+                                        Collaboration</div>
+                                    <div class="indent-text"><img
+                                            src="https://cdn.prod.website-files.com/6462467c39036f3d5f2ad5c3/66c0948352127360d3ddf391_Line-Break.svg"
+                                            loading="lazy" alt=""
+                                            class="indent hide-mobile-landscape hide-mobile-portrait" />
+                                        <div class="text-style-allcaps hide-mobile-portrait hide-mobile-landscape">To push
+                                            innovation foRwards</div>
+                                    </div>
                                 </div>
-                            </div>
 
-                        </div>
-                        <div data-w-id="98e96209-aa4a-9f74-d02c-e1a844363958" style="opacity:0" class="hero-text">
-                            <div class="roundall-white float">
-                                <div class="roundall-label">
-                                    <div class="text-style-allcaps text-size-small">Join the Shift</div>
-                                </div>
                             </div>
-                            <h1 class="hero">The Circles Initiative</h1>
+                            <div data-w-id="98e96209-aa4a-9f74-d02c-e1a844363958" style="opacity:0" class="hero-text">
+                                <div class="roundall-white float">
+                                    <div class="roundall-label">
+                                        <div class="text-style-allcaps text-size-small">Join the Shift</div>
+                                    </div>
+                                </div>
+                                <h1 class="hero">The Circles Initiative</h1>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </figure>
-        <section id="Overview" class="section-overview">
-            <div class="rl-padding-global">
-                <div class="rl-container-large">
-                    <div class="rl-padding-section-large">
-                        <div class="rl_layout192_component">
-                            <div id="w-node-d7db73aa-8970-700e-01ef-c9bf3068a0c9-5f2ad5bd" class="rl_layout192_content">
-                                <h2 class="heading-2 text-color-white" data-a-duration=".8" data-obs-t=".1"
+            </figure>
+            <section id="Overview" class="section-overview">
+                <div class="rl-padding-global">
+                    <div class="rl-container-large">
+                        <div class="rl-padding-section-large">
+                            <div class="rl_layout192_component">
+                                <div id="w-node-d7db73aa-8970-700e-01ef-c9bf3068a0c9-5f2ad5bd" class="rl_layout192_content">
+                                    <h2 class="heading-2 text-color-white" data-a-duration=".8" data-obs-t=".1"
+                                        data-a-split="char" data-a-each=".02" data-obs-once="true" data-a-delay=".1"
+                                        id="text_animation" data-a-ease="slow.out" data-obs-m="10px">Convening the UK's
+                                        <span data-obs-once="true" data-a-split="char" data-a-each=".02" data-a-delay=".2"
+                                            class="strong">best</span> and <span data-obs-once="true" data-a-split="char"
+                                            data-a-each=".02" data-a-delay=".2" class="strong">brightest</span> for <span
+                                            data-obs-once="true" data-a-split="char" data-a-each=".02" data-a-delay="0"
+                                            class="strong">today's challenges</span></h2>
+                                </div>
+                            </div>
+                            <div class="padding-xxlarge"></div>
+                            <div data-w-id="99752af4-f6a9-5dd4-cd38-1cff8ad7c996" class="rl_header1_component">
+                                <div class="padding-0"></div>
+                                <div id="w-node-_072d6c9c-69f2-23b3-824f-d7ed463171fc-5f2ad5bd" class="overview-body">
+                                    <h2 data-w-id="35ae3335-0f73-8cb0-faf4-6c8f59756327"
+                                        style="opacity:0;-webkit-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+                                        class="heading-style-h5 text-color-white">The scale and speed of complexity has
+                                        outpaced what siloed experts and narrow specialization can manage. Innovation is
+                                        increasingly shaped by private interests, where competitive incentives crowd out
+                                        shared responsibility. But structural problems cannot be solved in isolation. They
+                                        demand coordinated intelligence—something our current institutions are neither
+                                        designed nor incentivized to deliver.</h2>
+                                    <div class="padding-medium"></div><a href="" target="_blank" class="button hide-desktop w-button">Read More</a><a data-w-id="2b4547a0-9955-b8da-532d-d879a98f06b5" href="https://www.eventbrite.com/e/anyone-creative-meetup-002-reflection-tickets-998517792597" target="_blank" class="button is-icon hide-mobile-portrait w-inline-block">
+                                        <div>Read More</div>
+                                        <div style="opacity:1;width:10px;-webkit-transform:translate3d(0px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="icon-1x1-small icon-height-small w-embed"><svg width="8" height="8" viewBox="0 0 8 8" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.79293 1.5H1.00004V0.5H7.50004V7H6.50004V2.20711L1.35359 7.35355L0.646484 6.64645L5.79293 1.5Z" fill="white" />
+                                            </svg></div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="Speakers" class="section-ourspeakers" style="position: relative;">
+                    <div class="section-fade-bg framework-fade"></div>
+                    <div class="rl-padding-global">
+                        <div class="rl-container-large">
+                            <div class="rl-padding-section-large">
+                                <h1 class="heading text-color-white text-align-center" data-a-duration="1.0" data-obs-t=".1"
                                     data-a-split="char" data-a-each=".02" data-obs-once="true" data-a-delay=".1"
-                                    id="text_animation" data-a-ease="slow.out" data-obs-m="10px">Convening the UK's
-                                    <span data-obs-once="true" data-a-split="char" data-a-each=".02" data-a-delay=".2"
-                                        class="strong">best</span> and <span data-obs-once="true" data-a-split="char"
-                                        data-a-each=".02" data-a-delay=".2" class="strong">brightest</span> for <span
-                                        data-obs-once="true" data-a-split="char" data-a-each=".02" data-a-delay="0"
-                                        class="strong">today's challenges</span></h2>
+                                    data-a-ease="slow.out" data-obs-m="0px">Framework</h1>
                             </div>
-                        </div>
-                        <div class="padding-xxlarge"></div>
-                        <div data-w-id="99752af4-f6a9-5dd4-cd38-1cff8ad7c996" class="rl_header1_component">
-                            <div class="padding-0"></div>
-                            <div id="w-node-_072d6c9c-69f2-23b3-824f-d7ed463171fc-5f2ad5bd" class="overview-body">
-                                <h2 data-w-id="35ae3335-0f73-8cb0-faf4-6c8f59756327"
-                                    style="opacity:0;-webkit-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
-                                    class="heading-style-h5 text-color-white">The scale and speed of complexity has
-                                    outpaced what siloed experts and narrow specialization can manage. Innovation is
-                                    increasingly shaped by private interests, where competitive incentives crowd out
-                                    shared responsibility. But structural problems cannot be solved in isolation. They
-                                    demand coordinated intelligence—something our current institutions are neither
-                                    designed nor incentivized to deliver.</h2>
-                                <div class="padding-medium"></div><a href="" target="_blank" class="button hide-desktop w-button">Read More</a><a data-w-id="2b4547a0-9955-b8da-532d-d879a98f06b5" href="https://www.eventbrite.com/e/anyone-creative-meetup-002-reflection-tickets-998517792597" target="_blank" class="button is-icon hide-mobile-portrait w-inline-block">
-                                    <div>Read More</div>
-                                    <div style="opacity:1;width:10px;-webkit-transform:translate3d(0px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="icon-1x1-small icon-height-small w-embed"><svg width="8" height="8" viewBox="0 0 8 8" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.79293 1.5H1.00004V0.5H7.50004V7H6.50004V2.20711L1.35359 7.35355L0.646484 6.64645L5.79293 1.5Z" fill="white" />
-                                        </svg></div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="Speakers" class="section-ourspeakers">
-            <div class="rl-padding-global">
-                <div class="rl-container-large">
-                    <div class="rl-padding-section-large">
-                        <h1 class="heading text-color-white text-align-center" data-a-duration="1.0" data-obs-t=".1"
-                            data-a-split="char" data-a-each=".02" data-obs-once="true" data-a-delay=".1"
-                            data-a-ease="slow.out" data-obs-m="0px">Framework</h1>
-                    </div>
-                    
-                        <div class="speaker-list-component">
-                            <div data-w-id="9f8182e6-a987-46e2-d429-a2de4763b47a" class="speaker-list-item">
-                                <div class="speaker-name">
-                                    <div data-obs-once="true" data-a-split="line" class="heading-3 text-color-white">
-                                        Contextualization</div>
-                                    <div class="padding-xxsmall"></div>
-                                    <div data-w-id="1292fc01-510c-6984-3474-e1e55e28bd98"
-                                        style="opacity:0;-webkit-transform:translate3d(0, 16px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 16px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 16px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 16px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
-                                        class="roundall-white">
-                                        <div class="roundall-label">
-                                            <div class="bulletpoint"></div>
-                                            <div class="text-style-allcaps">Phase 1</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <p data-w-id="9f8182e6-a987-46e2-d429-a2de4763b47e"
-                                    style="opacity:0;-webkit-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
-                                    class="heading-style-h6 text-color-white">Participants share firsthand experiences
-                                    of the problem from their sector's perspective, establishing a shared set of
-                                    assumptions grounded in reality. This ensures everyone understands the true nature
-                                    of the challenge from multiple angles.</p>
-                                <div class="cta38_link-image-wrapper pointer-events-off"><img
-                                        src="context.png"
-                                        loading="eager" sizes="100vw"
-                                        srcset="context.png 1080w"
-                                        alt="" class="cta38_link-image" /></div>
-                            </div>
-                            <div data-w-id="0cf1d939-3252-d4c4-ad33-5d9fdc8fa966" class="speaker-list-item">
-                                <div class="speaker-name">
-                                    <div data-obs-once="true" data-a-split="line" data-a-delay=".2"
-                                        class="heading-3 text-color-white">Conceptualisation</div>
-                                    <div class="padding-xxsmall"></div>
-                                    <div data-w-id="20fccff9-4d29-4b6d-4d6c-28ae8a87fbd7"
-                                        style="opacity:0;-webkit-transform:translate3d(0, 16px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 16px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 16px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 16px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
-                                        class="roundall-white">
-                                        <div class="roundall-label">
-                                            <div class="bulletpoint"></div>
-                                            <div class="text-style-allcaps">Phase 2</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <p data-w-id="0cf1d939-3252-d4c4-ad33-5d9fdc8fa96a"
-                                    style="opacity:0;-webkit-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
-                                    class="heading-style-h6 text-color-white">The group identifies the systemic
-                                    constraints preventing the problem from being solved. With all components of the
-                                    system represented in the room, participants uncover barriers that might remain
-                                    invisible to any single sector working alone.
-                                </p>
-                                <div class="cta38_link-image-wrapper pointer-events-off"><img
-                                        src="concept.png"
-                                        loading="eager" sizes="100vw"
-                                        srcset="concept.png 1080w"
-                                        alt="" class="cta38_link-image" /></div>
-                            </div>
-                            <div data-w-id="47e06059-307c-2380-f9cd-18b932cc2b3d" class="speaker-list-item">
-                                <div class="speaker-name">
-                                    <div data-obs-once="true" data-a-split="line" data-a-delay=".2"
-                                        class="heading-3 text-color-white">Codification</div>
-                                    <div class="padding-xxsmall"></div>
-                                    <div data-w-id="47e06059-307c-2380-f9cd-18b932cc2b42"
-                                        style="opacity:0;-webkit-transform:translate3d(0, 16px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 16px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 16px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 16px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
-                                        class="roundall-white">
-                                        <div class="roundall-label">
-                                            <div class="bulletpoint"></div>
-                                            <div class="text-style-allcaps">Phase 3</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <p data-w-id="47e06059-307c-2380-f9cd-18b932cc2b47"
-                                    style="opacity:0;-webkit-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
-                                    class="heading-style-h6 text-color-white">The Circle establishes specific actions to
-                                    address identified constraints and assigns them to participants. This creates a
-                                    practical roadmap with clear ownership and accountability.
-                                </p>
-                                <div class="cta38_link-image-wrapper pointer-events-off"><img
-                                        src="codex.png"
-                                        loading="eager" sizes="100vw"
-                                        srcset="codex.png 1080w"
-                                        alt="" class="cta38_link-image" /></div>
-                            </div>
-
-                            <div class="cta38_hover-css w-embed">
-                                <style>
-                                    /* Prevents hover states from being used on Tablet & Mobile */
-                                    @media only screen and (min-width: 992px) {
-
-                                        /* Makes all text inside component black. 
-Change the color of the text here, instead of on Webflow for this to work */
-                                        .cta38_component a {
-                                            color: #000000;
-                                        }
-
-                                        /* Makes all text inside component grey on hover.
-Change the color of the text here, instead of on Webflow for this to work */
-                                        .cta38_component:hover a {
-                                            color: #c4c4c4;
-                                        }
-
-                                        /* Makes text inside link block black on hover.
-Change the color of the text here, instead of on Webflow for this to work */
-                                        .cta38_component:hover a:hover {
-                                            color: #000000;
-                                        }
-
-                                    }
-                                </style>
-                            </div>
-                        </div>
-                        <div class="padding-xxlarge"></div>
-                    
-                </div>
-            </div>
-        </section>
-        <!--<section id="Socials" class="section-carousel">
-            <section class="section_gallery18">
-                <div class="gallery18_component">
-                    <div data-delay="3000" data-animation="slide" class="gallery18_slider w-slider" data-autoplay="true"
-                        data-easing="ease-out-cubic" data-hide-arrows="false" data-disable-swipe="false"
-                        data-autoplay-limit="0" data-nav-spacing="3" data-duration="1000" data-infinite="true"
-                        id="gallery13_slider">
-                        <div class="gallery18_mask w-slider-mask">
-                            <div class="gallery18_slide w-slide"><a href="index.html#"
-                                    class="gallery18_lightbox-link w-inline-block w-lightbox">
-                                    <div class="gallery18_image-wrapper"><img src="circular.jpg" loading="lazy"
-                                            sizes="(max-width: 479px) 50vw, (max-width: 767px) 47vw, 30vw"
-                                            srcset="circular.jpg 500w, circular.jpg 800w, circular.jpg 1080w"
-                                            alt="An image of an enamel pin and sticker of the Anyone logo"
-                                            class="gallery18_image" /></div>
-                                    <script type="application/json" class="w-json">
-                                            {
-                                                "items": [],
-                                                "group": ""
-                                            }
-                                        </script>
-                                </a></div>
-                            <div class="gallery18_slide w-slide"><a href="index.html#"
-                                    class="gallery18_lightbox-link w-inline-block w-lightbox">
-                                    <div class="gallery18_image-wrapper"><img
-                                            src="sphere.jpeg" 
-                                            loading="lazy"
-                                            sizes="(max-width: 479px) 50vw, (max-width: 767px) 47vw, 30vw"
-                                            srcset="sphere.jpeg 500w, sphere.jpeg 800w, sphere.jpeg 1080w"
-                                            alt="An event space with the anyone logo projected on the wall"
-                                            class="gallery18_image" /></div>
-                                    <script type="application/json" class="w-json">
-                                            {
-                                                "items": [],
-                                                "group": ""
-                                            }
-                                        </script>
-                                </a></div>
-                            <div class="gallery18_slide w-slide"><a href="index.html#"
-                                    class="gallery18_lightbox-link w-inline-block w-lightbox">
-                                    <div class="gallery18_image-wrapper"><img
-                                            src="https://cdn.prod.website-files.com/6462467c39036f3d5f2ad5c3/6682dca3062ed1e9669b2915_IMG%203.webp"
-                                            loading="lazy"
-                                            sizes="(max-width: 479px) 50vw, (max-width: 767px) 47vw, 30vw"
-                                            srcset="https://cdn.prod.website-files.com/6462467c39036f3d5f2ad5c3/6682dca3062ed1e9669b2915_IMG%203-p-500.webp 500w, https://cdn.prod.website-files.com/6462467c39036f3d5f2ad5c3/6682dca3062ed1e9669b2915_IMG%203-p-800.webp 800w, https://cdn.prod.website-files.com/6462467c39036f3d5f2ad5c3/6682dca3062ed1e9669b2915_IMG%203.webp 1080w"
-                                            alt="A person arranging a selection of Anyone merch"
-                                            class="gallery18_image" /></div>
-                                    <script type="application/json" class="w-json">
-                                            {
-                                                "items": [],
-                                                "group": ""
-                                            }
-                                        </script>
-                                </a></div>
-                            <div class="gallery18_slide w-slide"><a href="index.html#"
-                                    class="gallery18_lightbox-link w-inline-block w-lightbox">
-                                    <div class="gallery18_image-wrapper"><img
-                                            src="https://cdn.prod.website-files.com/6462467c39036f3d5f2ad5c3/6682dca31f3b6acc9144719f_IMG%204.webp"
-                                            loading="lazy"
-                                            sizes="(max-width: 479px) 50vw, (max-width: 767px) 47vw, 30vw"
-                                            srcset="https://cdn.prod.website-files.com/6462467c39036f3d5f2ad5c3/6682dca31f3b6acc9144719f_IMG%204-p-500.webp 500w, https://cdn.prod.website-files.com/6462467c39036f3d5f2ad5c3/6682dca31f3b6acc9144719f_IMG%204-p-800.webp 800w, https://cdn.prod.website-files.com/6462467c39036f3d5f2ad5c3/6682dca31f3b6acc9144719f_IMG%204.webp 1080w"
-                                            alt="Eve Warren presenting some creative design work at the previous anyone event"
-                                            class="gallery18_image" /></div>
-                                    <script type="application/json" class="w-json">
-                                            {
-                                                "items": [],
-                                                "group": ""
-                                            }
-                                        </script>
-                                </a></div>
-                            <div class="gallery18_slide w-slide"><a href="index.html#"
-                                    class="gallery18_lightbox-link w-inline-block w-lightbox">
-                                    <div class="gallery18_image-wrapper"><img
-                                            src="https://cdn.prod.website-files.com/6462467c39036f3d5f2ad5c3/6682dd9fe807bbc5c0f466d8_IMG%205.webp"
-                                            loading="lazy"
-                                            sizes="(max-width: 479px) 50vw, (max-width: 767px) 47vw, 30vw"
-                                            srcset="https://cdn.prod.website-files.com/6462467c39036f3d5f2ad5c3/6682dd9fe807bbc5c0f466d8_IMG%205-p-500.webp 500w, https://cdn.prod.website-files.com/6462467c39036f3d5f2ad5c3/6682dd9fe807bbc5c0f466d8_IMG%205-p-800.webp 800w, https://cdn.prod.website-files.com/6462467c39036f3d5f2ad5c3/6682dd9fe807bbc5c0f466d8_IMG%205.webp 1080w"
-                                            alt="An anyone branded enamel pin on a denim jacket"
-                                            class="gallery18_image" /></div>
-                                    <script type="application/json" class="w-json">
-                                            {
-                                                "items": [],
-                                                "group": ""
-                                            }
-                                        </script>
-                                </a></div>
-                        </div>
-                        <div class="gallery18_arrow hide-mobile-landscape w-slider-arrow-left">
-                            <div class="gallery18_arrow-icon w-embed"><svg width="100%" height="100%"
-                                    viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M3.31066 8.75001L9.03033 14.4697L7.96967 15.5303L0.439339 8.00001L7.96967 0.469676L9.03033 1.53034L3.31066 7.25001L15.5 7.25L15.5 8.75L3.31066 8.75001Z"
-                                        fill="currentColor" />
-                                </svg></div>
-                        </div>
-                        <div class="gallery18_arrow hide-mobile-landscape w-slider-arrow-right">
-                            <div class="gallery18_arrow-icon w-embed"><svg width="100%" height="100%"
-                                    viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M12.6893 7.25L6.96967 1.53033L8.03033 0.469666L15.5607 8L8.03033 15.5303L6.96967 14.4697L12.6893 8.75H0.5V7.25H12.6893Z"
-                                        fill="currentColor" />
-                                </svg></div>
-                        </div>
-                        <div class="gallery18_slide-nav w-slider-nav w-slider-nav-invert w-round"></div>
-                    </div>
-                </div>
-            </section>-->
-        
-        <section id="Why-Anyone" class="section-why">
-            <div class="rl-padding-global">
-                <div class="rl-container-large">
-                    <div class="rl-padding-section-large">
-                        <div class="rl_header1_component">
-                            <div class="padding-section-small">
-                                <h1 data-obs-once="true" data-a-split="line" id="About"
-                                    class="heading-4 is-white text-style-allcaps">About the<br /><span
-                                        data-obs-once="true" data-a-split="line"
-                                        class="text-weight-bold padding-left">Initiative</span></h1>
-                            </div>
-                            <div id="w-node-a78dadcf-dec9-4813-d625-87bcf9e4ab7b-5f2ad5bd"
-                                class="padding-section-small">
-                                <h2 data-w-id="a78dadcf-dec9-4813-d625-87bcf9e4ab7c"
-                                    style="opacity:0;-webkit-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
-                                    class="heading-style-h6 text-color-white">The Circles Initiative aims to reignite
-                                    the flame of collective effort through a series of intentional, curated
-                                    collaborations between technologists, researchers, business leaders, policy makers,
-                                    and frontline practitioners, directed towards finding actionable solutions. We pair
-                                    these participants with the most pressing systemic challenges and equip them with
-                                    the sharpest tools, strategic support, and the freedom to think beyond institutional
-                                    constraints, resulting in idea generation that moves decisively towards
-                                    implementation.</h2>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <div class="section-largetext">
-            <section data-w-id="42f7944b-8f79-f6b1-2cc9-d74135c1e14d" class="section_banner13">
-                <div class="padding-section-xs padding-bottom">
-                    <div data-w-id="42f7944b-8f79-f6b1-2cc9-d74135c1e14f"
-                    style="-webkit-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);"
-                    class="banner13_component">
-                        <h1 class="banner13_heading-top">Collective Intelligence for Collective Challenges</h1>
-                        <h1 class="banner13_heading-top">Collective Intelligence for Collective Challenges</h1>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <!--<section id="Partners" class="section-logogrid">
-                <div class="padding-global">
-                    <div class="container-large">
-                        <div class="padding-section-large">
-                            <div class="margin-bottom margin-large">
-                                <div class="text-align-center">
-                                    <div class="max-width-large align-center">
-                                        <div class="roundall-black">
-                                            <div class="roundall-label">
-                                                <div class="bulletpoint background-color-black"></div>
-                                                <div class="text-style-allcaps text-color-black">Partners</div>
+                            
+                                <div class="speaker-list-component">
+                                    <div data-w-id="9f8182e6-a987-46e2-d429-a2de4763b47a" class="speaker-list-item">
+                                        <div class="speaker-name">
+                                            <div data-obs-once="true" data-a-split="line" class="heading-3 text-color-white">
+                                                Contextualization</div>
+                                            <div class="padding-xxsmall"></div>
+                                            <div data-w-id="1292fc01-510c-6984-3474-e1e55e28bd98"
+                                                style="opacity:0;-webkit-transform:translate3d(0, 16px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 16px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 16px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 16px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+                                                class="roundall-white">
+                                                <div class="roundall-label">
+                                                    <div class="bulletpoint"></div>
+                                                    <div class="text-style-allcaps">Phase 1</div>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="padding-xsmall"></div>
-                                        <h3 class="heading-3" data-a-duration="0.8" data-obs-t=".1" data-a-split="char" data-a-each=".02" data-obs-once="true" data-a-delay=".1" data-a-ease="slow.out" data-obs-m="0px">Proudly supported by our creative partners from across the globe</h3>
+                                        <p data-w-id="9f8182e6-a987-46e2-d429-a2de4763b47e"
+                                            style="opacity:0;-webkit-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+                                            class="heading-style-h6 text-color-white">Participants share firsthand experiences
+                                            of the problem from their sector's perspective, establishing a shared set of
+                                            assumptions grounded in reality. This ensures everyone understands the true nature
+                                            of the challenge from multiple angles.</p>
+                                        <div class="cta38_link-image-wrapper pointer-events-off"><img
+                                                src=""
+                                                loading="eager" sizes="100vw"
+                                                srcset=""
+                                                alt="" class="cta38_link-image" /></div>
+                                    </div>
+                                    <div data-w-id="0cf1d939-3252-d4c4-ad33-5d9fdc8fa966" class="speaker-list-item">
+                                        <div class="speaker-name">
+                                            <div data-obs-once="true" data-a-split="line" data-a-delay=".2"
+                                                class="heading-3 text-color-white">Conceptualisation</div>
+                                            <div class="padding-xxsmall"></div>
+                                            <div data-w-id="20fccff9-4d29-4b6d-4d6c-28ae8a87fbd7"
+                                                style="opacity:0;-webkit-transform:translate3d(0, 16px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 16px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 16px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 16px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+                                                class="roundall-white">
+                                                <div class="roundall-label">
+                                                    <div class="bulletpoint"></div>
+                                                    <div class="text-style-allcaps">Phase 2</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p data-w-id="0cf1d939-3252-d4c4-ad33-5d9fdc8fa96a"
+                                            style="opacity:0;-webkit-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+                                            class="heading-style-h6 text-color-white">The group identifies the systemic
+                                            constraints preventing the problem from being solved. With all components of the
+                                            system represented in the room, participants uncover barriers that might remain
+                                            invisible to any single sector working alone.
+                                        </p>
+                                        <div class="cta38_link-image-wrapper pointer-events-off"><img
+                                                src=""
+                                                loading="eager" sizes="100vw"
+                                                srcset=""
+                                                alt="" class="cta38_link-image" /></div>
+                                    </div>
+                                    <div data-w-id="47e06059-307c-2380-f9cd-18b932cc2b3d" class="speaker-list-item">
+                                        <div class="speaker-name">
+                                            <div data-obs-once="true" data-a-split="line" data-a-delay=".2"
+                                                class="heading-3 text-color-white">Codification</div>
+                                            <div class="padding-xxsmall"></div>
+                                            <div data-w-id="47e06059-307c-2380-f9cd-18b932cc2b42"
+                                                style="opacity:0;-webkit-transform:translate3d(0, 16px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 16px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 16px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 16px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+                                                class="roundall-white">
+                                                <div class="roundall-label">
+                                                    <div class="bulletpoint"></div>
+                                                    <div class="text-style-allcaps">Phase 3</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p data-w-id="47e06059-307c-2380-f9cd-18b932cc2b47"
+                                            style="opacity:0;-webkit-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+                                            class="heading-style-h6 text-color-white">The Circle establishes specific actions to
+                                            address identified constraints and assigns them to participants. This creates a
+                                            practical roadmap with clear ownership and accountability.
+                                        </p>
+                                        <div class="cta38_link-image-wrapper pointer-events-off"><img
+                                                src=""
+                                                loading="eager" sizes="100vw"
+                                                srcset=""
+                                                alt="" class="cta38_link-image" /></div>
+                                    </div>
+
+                                    <div class="cta38_hover-css w-embed">
+                                        <style>
+                                            /* Prevents hover states from being used on Tablet & Mobile */
+                                            @media only screen and (min-width: 992px) {
+
+                                                /* Makes all text inside component black. 
+Change the color of the text here, instead of on Webflow for this to work */
+                                                .cta38_component a {
+                                                    color: #000000;
+                                                }
+
+                                                /* Makes all text inside component grey on hover.
+Change the color of the text here, instead of on Webflow for this to work */
+                                                .cta38_component:hover a {
+                                                    color: #c4c4c4;
+                                                }
+
+                                                /* Makes text inside link block black on hover.
+Change the color of the text here, instead of on Webflow for this to work */
+                                                .cta38_component:hover a:hover {
+                                                    color: #000000;
+                                                }
+
+                                            }
+                                        </style>
+                                    </div>
+                                </div>
+                                <div class="padding-xxlarge"></div>
+                            
+                        </div>
+                    </section>
+                    <section id="Why-Anyone" class="section-why" style="position: relative;">
+                        <div class="section-fade-bg about-solid"></div>
+                        <div class="rl-padding-global">
+                            <div class="rl-container-large">
+                                <div class="rl-padding-section-large">
+                                    <div class="rl_header1_component">
+                                        <div class="padding-section-small">
+                                            <h1 data-obs-once="true" data-a-split="line" id="About"
+                                                class="heading-4 is-white text-style-allcaps">About the<br /><span
+                                                    data-obs-once="true" data-a-split="line"
+                                                    class="text-weight-bold padding-left">Initiative</span></h1>
+                                        </div>
+                                        <div id="w-node-a78dadcf-dec9-4813-d625-87bcf9e4ab7b-5f2ad5bd"
+                                            class="padding-section-small">
+                                            <h2 data-w-id="a78dadcf-dec9-4813-d625-87bcf9e4ab7c"
+                                                style="opacity:0;-webkit-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+                                                class="heading-style-h6 text-color-white">The Circles Initiative aims to reignite
+                                                the flame of collective effort through a series of intentional, curated
+                                                collaborations between technologists, researchers, business leaders, policy makers,
+                                                and frontline practitioners, directed towards finding actionable solutions. We pair
+                                                these participants with the most pressing systemic challenges and equip them with
+                                                the sharpest tools, strategic support, and the freedom to think beyond institutional
+                                                constraints, resulting in idea generation that moves decisively towards
+                                                implementation.</h2>
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
-                            <div data-w-id="7aba71b3-74ab-3a54-37ff-645da2422019" style="opacity:0;-webkit-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="w-layout-grid logo6_list">
+                        </section>
+                    </div>
+                <div class="section-largetext">
+                    <section data-w-id="42f7944b-8f79-f6b1-2cc9-d74135c1e14d" class="section_banner13" style="position: relative;">
+                        <div class="section-fade-bg banner-fade"></div>
+                        <div class="padding-section-xs padding-bottom">
+                            <div data-w-id="42f7944b-8f79-f6b1-2cc9-d74135c1e14f"
+                            style="-webkit-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);"
+                            class="banner13_component">
+                                <h1 class="banner13_heading-top">Collective Intelligence for Collective Challenges</h1>
+                                <h1 class="banner13_heading-top">Collective Intelligence for Collective Challenges</h1>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!--<section id="Partners" class="section-logogrid">
+                        <div class="padding-global">
+                            <div class="container-large">
+                                <div class="padding-section-large">
+                                    <div class="margin-bottom margin-large">
+                                        <div class="text-align-center">
+                                            <div class="max-width-large align-center">
+                                                <div class="roundall-black">
+                                                    <div class="roundall-label">
+                                                        <div class="bulletpoint background-color-black"></div>
+                                                        <div class="text-style-allcaps text-color-black">Partners</div>
+                                                    </div>
+                                                </div>
+                                                <div class="padding-xsmall"></div>
+                                                <h3 class="heading-3" data-a-duration="0.8" data-obs-t=".1" data-a-split="char" data-a-each=".02" data-obs-once="true" data-a-delay=".1" data-a-ease="slow.out" data-obs-m="0px">Proudly supported by our creative partners from across the globe</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-w-id="7aba71b3-74ab-3a54-37ff-645da2422019" style="opacity:0;-webkit-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="w-layout-grid logo6_list">
                                 <div id="w-node-_81f9fd70-69cb-bdaa-eb7a-3ca8bdbc5621-5f2ad5bd" class="logo6_wrapper"><img src="https://cdn.prod.website-files.com/6462467c39036f3d5f2ad5c3/66c07423040993453db640c2_Partners_Webflow.svg" loading="lazy" alt="Webflow logo" class="logo6_logo" /></div>
                                 <div id="w-node-c77afda2-1209-1112-3703-a5ec08313670-5f2ad5bd" class="logo6_wrapper"><img src="https://cdn.prod.website-files.com/6462467c39036f3d5f2ad5c3/66c07423ca49535d8be290f4_Partners_Dept.svg" loading="lazy" alt="Department Leeds Dock Logo" class="logo6_logo" /></div>
                                 <div id="w-node-_6df4ea2a-874b-5311-c864-3ee907f2ae4a-5f2ad5bd" class="logo6_wrapper"><img src="https://cdn.prod.website-files.com/6462467c39036f3d5f2ad5c3/66c074234947f78537d67507_Department-logo_Ferns.avif" loading="lazy" alt="Fearns logo" class="logo6_logo" /></div>
@@ -864,65 +827,65 @@ Change the color of the text here, instead of on Webflow for this to work */
                             <div class="text-align-center"><a data-w-id="84858d28-f7cf-0b8c-a86d-cfd3c5b60d90" style="opacity:0;-webkit-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" href="mailto:hello@anyone.events?subject=Partner%20Opportunity" class="button-black is-icon w-button">Become a Partner</a></div>
                         </div>
                     </div>
-                </div>
-            </section>-->
-        <footer id="Join-Our-Community" class="footer3_component">
-            <div class="padding-global">
-                <div class="container-large">
-                    <div class="padding-section-large">
-                        <div class="footer3_columns">
-                            <div class="register-interest">
-                                <div class="padding-small"></div>
-                                <div class="heading-2 text-color-white" data-obs-t=".1" data-split-duration=".8"
-                                    data-a-split="char" data-a-each=".02" data-obs-once="true" data-a-delay=".1"
-                                    data-a-ease="slow.out" data-obs-m="0px">Contact Us</div>
-                                <div class="padding-xsmall"></div>
-                                <p data-w-id="ab4a6ad4-92f0-5086-9b2f-65370b7513f0"
-                                    style="opacity:0;-webkit-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
-                                    class="heading-style-h6 text-color-white">Whether you're a policymaker,
-                                    practitioner, strategist, or systems thinker, we invite you to connect. If you're
-                                    facing a complex challenge, building something transformative, or seeking alignment
-                                    across sectors, we want to hear from you.</p>
-                                <div class="padding-small"></div><a
-                                    href="mailto:info@circlesinitiative.com"
-                                    target="_blank" class="button hide-desktop w-button">Contact</a><a
-                                    data-w-id="a1da29f5-9597-8063-41b7-24c0692fa104"
-                                    style="opacity:0;-webkit-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
-                                    href="mailto:info@circlesiniative.com"
-                                    target="_blank" class="button is-icon hide-mobile-portrait w-inline-block">
-                                    <div>Contact</div>
-                                    <div style="opacity:1;width:10px;-webkit-transform:translate3d(0px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
-                                        class="icon-1x1-small icon-height-small w-embed"><svg width="8" height="8"
-                                            viewBox="0 0 8 8" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M5.79293 1.5H1.00004V0.5H7.50004V7H6.50004V2.20711L1.35359 7.35355L0.646484 6.64645L5.79293 1.5Z"
-                                                fill="white" />
-                                        </svg></div>
-                                </a>
+                </section>-->
+            <footer id="Join-Our-Community" class="footer3_component">
+                <div class="padding-global">
+                    <div class="container-large">
+                        <div class="padding-section-large">
+                            <div class="footer3_columns">
+                                <div class="register-interest">
+                                    <div class="padding-small"></div>
+                                    <div class="heading-2 text-color-white" data-obs-t=".1" data-split-duration=".8"
+                                        data-a-split="char" data-a-each=".02" data-obs-once="true" data-a-delay=".1"
+                                        data-a-ease="slow.out" data-obs-m="0px">Contact Us</div>
+                                    <div class="padding-xsmall"></div>
+                                    <p data-w-id="ab4a6ad4-92f0-5086-9b2f-65370b7513f0"
+                                        style="opacity:0;-webkit-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+                                        class="heading-style-h6 text-color-white">Whether you're a policymaker,
+                                        practitioner, strategist, or systems thinker, we invite you to connect. If you're
+                                        facing a complex challenge, building something transformative, or seeking alignment
+                                        across sectors, we want to hear from you.</p>
+                                    <div class="padding-small"></div><a
+                                        href="mailto:info@circlesinitiative.com"
+                                        target="_blank" class="button hide-desktop w-button">Contact</a><a
+                                        data-w-id="a1da29f5-9597-8063-41b7-24c0692fa104"
+                                        style="opacity:0;-webkit-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+                                        href="mailto:info@circlesiniative.com"
+                                        target="_blank" class="button is-icon hide-mobile-portrait w-inline-block">
+                                        <div>Contact</div>
+                                        <div style="opacity:1;width:10px;-webkit-transform:translate3d(0px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+                                            class="icon-1x1-small icon-height-small w-embed"><svg width="8" height="8"
+                                                viewBox="0 0 8 8" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M5.79293 1.5H1.00004V0.5H7.50004V7H6.50004V2.20711L1.35359 7.35355L0.646484 6.64645L5.79293 1.5Z"
+                                                    fill="white" />
+                                            </svg></div>
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="padding-top">
-                            <div class="w-layout-grid footer3_top-wrapper">
-                                <div id="w-node-a1c853f0-65c2-5b1c-2100-977b2c1bb672-5f2ad5bd" class="footer-logo"><img
-                                        src="circlelogo.png" loading="lazy" alt="" class="rl_navbar3_logo2" /></div>
-                                <div class="w-layout-grid footer3_menu-wrapper">
-                                    <div id="w-node-a1c853f0-65c2-5b1c-2100-977b2c1bb69e-5f2ad5bd"
-                                        class="footer3_link-list">
-                                        
+                            <div class="padding-top">
+                                <div class="w-layout-grid footer3_top-wrapper">
+                                    <div id="w-node-a1c853f0-65c2-5b1c-2100-977b2c1bb672-5f2ad5bd" class="footer-logo"><img
+                                            src="circlelogo.png" loading="lazy" alt="" class="rl_navbar3_logo2" /></div>
+                                    <div class="w-layout-grid footer3_menu-wrapper">
+                                        <div id="w-node-a1c853f0-65c2-5b1c-2100-977b2c1bb69e-5f2ad5bd"
+                                            class="footer3_link-list">
+                                            
 
-                                    </div>
-                                    
-                                    <div id="w-node-_1cdc5638-fc2b-57e8-380e-3e5ae047ed3d-5f2ad5bd"
-                                        class="padding-medium hide-mobile-portrait"></div>
-                                    <div class="terms">
-                                        <div class="text-style-allcaps text-color-grey">Copyright Circles Iniatiative
-                                            2025<br /></div>
-                                        <div class="nathandco">
-                                            <div class="text-style-allcaps text-color-grey">Designed BY</div><a
-                                                href="https://www.princypl.com/"
-                                                class="nath-co-link w-inline-block"><img src="princypl.png"
-                                                    loading="lazy" width="96" height="Auto" alt="Princypl Logo"
-                                                    class="image-2" /></a>
+                                        </div>
+                                        
+                                        <div id="w-node-_1cdc5638-fc2b-57e8-380e-3e5ae047ed3d-5f2ad5bd"
+                                            class="padding-medium hide-mobile-portrait"></div>
+                                        <div class="terms">
+                                            <div class="text-style-allcaps text-color-grey">Copyright Circles Iniatiative
+                                                2025<br /></div>
+                                            <div class="nathandco">
+                                                <div class="text-style-allcaps text-color-grey">Designed BY</div><a
+                                                    href="https://www.princypl.com/"
+                                                    class="nath-co-link w-inline-block"><img src="princypl.png"
+                                                        loading="lazy" width="96" height="Auto" alt="Princypl Logo"
+                                                        class="image-2" /></a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -930,84 +893,47 @@ Change the color of the text here, instead of on Webflow for this to work */
                         </div>
                     </div>
                 </div>
-            </div>
-        </footer>
-        <section class="section_cta38">
-            <div class="cta-38-instructions-delete">
-                <div class="container-small">
-                    <div class="margin-bottom margin-small">
-                        <div class="margin-bottom margin-xxsmall">
-                            <div class="text-size-medium-5 text-weight-bold">Instructions</div>
+            </footer>
+            <section class="section_cta38">
+                <div class="cta-38-instructions-delete">
+                    <div class="container-small">
+                        <div class="margin-bottom margin-small">
+                            <div class="margin-bottom margin-xxsmall">
+                                <div class="text-size-medium-5 text-weight-bold">Instructions</div>
+                            </div>
+                            <div class="margin-bottom margin-xxsmall">
+                                <div>To make this component work you must follow these steps:<br /></div>
+                            </div>
+                            <ol role="list" class="cta38_instructions-list">
+                                <li class="cta38_instructions-list-item">Add a <span
+                                        class="stylesystem-class-label is-animation">page trigger</span> and select <span
+                                        class="stylesystem-class-label is-animation">Mouse move in viewport</span></li>
+                                <li class="cta38_instructions-list-item">Select the <span
+                                        class="stylesystem-class-label is-animation">CTA 38 Image Movement</span> animation
+                                </li>
+                                <li class="cta38_instructions-list-item">Adjust smoothing to achieve desired affect
+                                    (recommend 80-90%)</li>
+                            </ol>
+                            <div class="hide">
+                                <div data-w-id="6eb6faf6-b3a1-3ad7-6df4-aff668c83612"></div>
+                            </div><img
+                                src="https://cdn.prod.website-files.com/6462467c39036f3d5f2ad5c3/65c5365844066ab57244ee88_Screen%20Shot%202022-05-02%20at%2011.40.53%20am.png"
+                                loading="lazy" width="236" alt="" />
                         </div>
-                        <div class="margin-bottom margin-xxsmall">
-                            <div>To make this component work you must follow these steps:<br /></div>
+                        <div class="cta38_instructions-callout">
+                            <div class="margin-bottom margin-xxsmall">
+                                <div class="text-weight-semibold">Important:<br /></div>
+                            </div>
+                            <div>If you rename this component, remember to update the classes in the HTML embed named <span
+                                    class="rl-styleguide_label">cta38_hover-css</span> found inside the <span
+                                    class="rl-styleguide_label">cta38_component</span> div.<br /></div><img
+                                src="https://cdn.prod.website-files.com/6462467c39036f3d5f2ad5c3/65c5365844066ab57244ee86_Screen%20Shot%202022-05-20%20at%2012.23%201.png"
+                                loading="lazy" alt="" width="200" class="cta38_instructions-callout-image" />
                         </div>
-                        <ol role="list" class="cta38_instructions-list">
-                            <li class="cta38_instructions-list-item">Add a <span
-                                    class="stylesystem-class-label is-animation">page trigger</span> and select <span
-                                    class="stylesystem-class-label is-animation">Mouse move in viewport</span></li>
-                            <li class="cta38_instructions-list-item">Select the <span
-                                    class="stylesystem-class-label is-animation">CTA 38 Image Movement</span> animation
-                            </li>
-                            <li class="cta38_instructions-list-item">Adjust smoothing to achieve desired affect
-                                (recommend 80-90%)</li>
-                        </ol>
-                        <div class="hide">
-                            <div data-w-id="6eb6faf6-b3a1-3ad7-6df4-aff668c83612"></div>
-                        </div><img
-                            src="https://cdn.prod.website-files.com/6462467c39036f3d5f2ad5c3/65c5365844066ab57244ee88_Screen%20Shot%202022-05-02%20at%2011.40.53%20am.png"
-                            loading="lazy" width="236" alt="" />
-                    </div>
-                    <div class="cta38_instructions-callout">
-                        <div class="margin-bottom margin-xxsmall">
-                            <div class="text-weight-semibold">Important:<br /></div>
-                        </div>
-                        <div>If you rename this component, remember to update the classes in the HTML embed named <span
-                                class="rl-styleguide_label">cta38_hover-css</span> found inside the <span
-                                class="rl-styleguide_label">cta38_component</span> div.<br /></div><img
-                            src="https://cdn.prod.website-files.com/6462467c39036f3d5f2ad5c3/65c5365844066ab57244ee86_Screen%20Shot%202022-05-20%20at%2012.23%201.png"
-                            loading="lazy" alt="" width="200" class="cta38_instructions-callout-image" />
-                    </div>
-                </div>
-            </div>
-            <div class="padding-global-3">
-                <div class="container-large">
-                    <div class="padding-section-large-2">
-                        <div class="margin-bottom margin-medium">
-                            <div class="text-weight-semibold">Tagline</div>
-                        </div>
-                        <div class="cta38_component"><a data-w-id="6eb6faf6-b3a1-3ad7-6df4-aff668c8362a"
-                                href="index.html#" class="cta38_link-block w-inline-block">
-                                <div class="cta38_link-text-small">01</div>
-                                <h3 class="cta38_link-text">Hover over link one</h3>
-                                <div class="cta38_link-image-wrapper pointer-events-off"><img
-                                        src="https://cdn.prod.website-files.com/6462467c39036f3d5f2ad5c3/65c5365844066ab57244ee85_Placeholder%20Image-1.svg"
-                                        loading="eager" alt="" class="cta38_link-image" /></div>
-                            </a><a data-w-id="6eb6faf6-b3a1-3ad7-6df4-aff668c83631" href="index.html#"
-                                class="cta38_link-block w-inline-block">
-                                <div class="cta38_link-text-small">02</div>
-                                <h3 class="cta38_link-text">Hover over link two</h3>
-                                <div class="cta38_link-image-wrapper pointer-events-off"><img
-                                        src="https://cdn.prod.website-files.com/6462467c39036f3d5f2ad5c3/65c5365844066ab57244ee84_Placeholder%20Image-2.svg"
-                                        loading="eager" alt="" class="cta38_link-image" /></div>
-                            </a><a data-w-id="6eb6faf6-b3a1-3ad7-6df4-aff668c83638" href="index.html#"
-                                class="cta38_link-block w-inline-block">
-                                <div class="cta38_link-text-small">03</div>
-                                <h3 class="cta38_link-text">Hover over link three</h3>
-                                <div class="cta38_link-image-wrapper pointer-events-off"><img
-                                        src="https://cdn.prod.website-files.com/6462467c39036f3d5f2ad5c3/65c5365844066ab57244ee82_Placeholder%20Image-3.svg"
-                                        loading="eager" alt="" class="cta38_link-image" /></div>
-                            </a><a data-w-id="6eb6faf6-b3a1-3ad7-6df4-aff668c8363f" href="index.html#"
-                                class="cta38_link-block w-inline-block">
-                                <div class="cta38_link-text-small">04</div>
-                                <h3 class="cta38_link-text">Hover over link four</h3>
-                                <div class="cta38_link-image-wrapper pointer-events-off"><img
-                                        src="https://cdn.prod.website-files.com/6462467c39036f3d5f2ad5c3/65c5365844066ab57244ee83_Placeholder%20Image-4.svg"
-                                        loading="eager" alt="" class="cta38_link-image" /></div>
-                            </a></div>
                     </div>
                 </div>
             </div>
+            
         </section>
     </main>
 
